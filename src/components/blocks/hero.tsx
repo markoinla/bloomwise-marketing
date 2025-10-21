@@ -39,9 +39,14 @@ export const Hero = () => {
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
+
+          <p className="text-primary my-2 text-lg font-medium md:text-xl">
+            Built by florists, for florists.
+          </p>
           <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
-            Your floral business will bloom
+            Make your floral business bloom
           </h1>
+
 
           <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
             Bloomwise is an AI-powered platform for managing every aspect of your floral business.
@@ -98,9 +103,12 @@ export const Hero = () => {
 
       <div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
         <div className="relative h-[793px] w-full">
-          <img
-            src="/hero.webp"
-            alt="hero"
+          <video
+            src="/design-demo.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
           />
         </div>
