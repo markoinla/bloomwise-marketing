@@ -32,6 +32,9 @@ WORKDIR /app
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 astro
 
+# Copy node_modules from deps stage (includes runtime dependencies)
+COPY --from=deps --chown=astro:nodejs /app/node_modules ./node_modules
+
 # Copy built application
 COPY --from=builder --chown=astro:nodejs /app/dist ./dist
 COPY --from=builder --chown=astro:nodejs /app/package.json ./package.json
