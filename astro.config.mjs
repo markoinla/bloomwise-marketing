@@ -10,7 +10,7 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://bloomwise.co",
   integrations: [mdx(), sitemap(), react()],
-  output: "server",
+  output: "hybrid",
   adapter: node({
     mode: "standalone",
   }),
