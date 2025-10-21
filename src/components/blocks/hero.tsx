@@ -13,7 +13,7 @@ import { GITHUB_URL } from "@/consts";
 const features = [
   {
     title: "Manage your end-to-end production workflow",
-    description: "From orders and design, to smart delivery routes, optimize every aspect of your business.",
+    description: "From orders and design, to delivery routes, optimize every aspect of your business.",
     icon: Workflow,
   },
   {
