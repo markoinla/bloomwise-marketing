@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { ChevronRight, Github } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -12,7 +12,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { GITHUB_URL } from "@/consts";
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
@@ -58,11 +57,10 @@ export const Navbar = () => {
       <div className="flex items-center justify-between px-6 py-3">
         <a href="/" className="flex shrink-0 items-center gap-2">
           <img
-            src="/logo.svg"
-            alt="logo"
+            src="/bloomwise-text-logo.svg"
+            alt="Bloomwise"
             width={94}
             height={18}
-            className="dark:invert"
           />
         </a>
 
@@ -121,13 +119,6 @@ export const Navbar = () => {
             <Button variant="outline">
               <span className="relative z-10">Login</span>
             </Button>
-          </a>
-          <a
-            href={GITHUB_URL}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <Github className="size-4" />
-            <span className="sr-only">GitHub</span>
           </a>
 
           {/* Hamburger Menu Button (Mobile Only) */}
