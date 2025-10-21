@@ -104,7 +104,7 @@ export const Hero = () => {
       <div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
         <div className="relative h-[793px] w-full">
           <video
-            src="/design-demo.mp4"
+            src="https://pub-faf0922fa8834bc78dc4ad5d963b77c7.r2.dev/website-assets/design-demo.mp4"
             autoPlay
             loop
             muted
