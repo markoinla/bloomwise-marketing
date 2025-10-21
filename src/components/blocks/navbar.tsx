@@ -116,7 +116,7 @@ export const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
-          <ThemeToggle />
+          <ThemeToggle className="hidden" />
           <a href="/login" className="max-lg:hidden">
             <Button variant="outline">
               <span className="relative z-10">Login</span>

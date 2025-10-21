@@ -6,17 +6,13 @@ import { Moon, Sun } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-const ThemeToggle = () => {
+const ThemeToggle = ({ className }: { className?: string }) => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
-    // Get initial theme from localStorage or system preference
+    // Default to light mode
     const savedTheme = localStorage.getItem("theme");
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-      .matches
-      ? "dark"
-      : "light";
-    const initialTheme = savedTheme || systemTheme;
+    const initialTheme = savedTheme || "light";
 
     setTheme(initialTheme as "light" | "dark");
     document.documentElement.classList.toggle("dark", initialTheme === "dark");
@@ -33,7 +29,7 @@ const ThemeToggle = () => {
     <Button
       variant="outline"
       size="icon"
-      className="size-8"
+      className={`size-8 ${className || ""}`}
       onClick={toggleTheme}
     >
       <Sun className="size-4 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
