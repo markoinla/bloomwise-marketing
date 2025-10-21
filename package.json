@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "start": "serve dist -l 4321 --no-request-logging",
+    "start": "serve dist -l 4321 -n",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint . --fix",
