@@ -1,9 +1,9 @@
 import {
   ArrowRight,
-  Blend,
-  ChartNoAxesColumn,
-  CircleDot,
-  Diamond,
+  Workflow,
+  Package,
+  CalendarCheck,
+  ShoppingBag,
 } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
@@ -12,24 +12,24 @@ import { GITHUB_URL } from "@/consts";
 
 const features = [
   {
-    title: "Tailored workflows",
-    description: "Track progress across custom issue flows for your team.",
-    icon: CircleDot,
+    title: "Manage your end-to-end production workflow",
+    description: "From orders and design, to smart delivery routes, optimize every aspect of your business.",
+    icon: Workflow,
   },
   {
-    title: "Cross-team projects",
-    description: "Collaborate across teams and departments.",
-    icon: Blend,
+    title: "Smart Recipe & inventory management",
+    description: "Easy-to-use AI recipe builder powered by an extensive flower database.",
+    icon: Package,
   },
   {
-    title: "Milestones",
-    description: "Break projects down into concrete phases.",
-    icon: Diamond,
+    title: "Stress free floral event planning",
+    description: "Plan and execute flawless events with task and cost management tools.",
+    icon: CalendarCheck,
   },
   {
-    title: "Progress insights",
-    description: "Track scope, velocity, and progress over time.",
-    icon: ChartNoAxesColumn,
+    title: "Shopify Integration",
+    description: "Seamlessly connect your online store to streamline your online production management.",
+    icon: ShoppingBag,
   },
 ];
 
@@ -40,12 +40,11 @@ export const Hero = () => {
         {/* Left side - Main content */}
         <div className="flex-1">
           <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
-            Mainline Astro template
+            Your floral business will bloom
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
-            Mainline is an open-source website template built with shadcn/ui,
-            Tailwind 4 & Astro 5
+            Bloomwise is an AI-powered platform for managing every aspect of your floral business.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
@@ -82,7 +81,7 @@ export const Hero = () => {
             const Icon = feature.icon;
             return (
               <div key={feature.title} className="flex gap-2.5 lg:gap-5">
-                <Icon className="text-foreground mt-1 size-4 shrink-0 lg:size-5" />
+                <Icon className="text-primary mt-1 size-4 shrink-0 lg:size-5" />
                 <div>
                   <h2 className="font-text text-foreground font-semibold">
                     {feature.title}

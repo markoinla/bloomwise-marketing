@@ -57,10 +57,10 @@ export const Navbar = () => {
       <div className="flex items-center justify-between px-6 py-3">
         <a href="/" className="flex shrink-0 items-center gap-2">
           <img
-            src="/bloomwise-text-logo.svg"
+            src="/bloomwise-line-logo.svg"
             alt="Bloomwise"
-            width={94}
-            height={18}
+            width={160}
+            height={60}
           />
         </a>
 
