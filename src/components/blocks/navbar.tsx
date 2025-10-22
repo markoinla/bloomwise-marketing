@@ -116,8 +116,13 @@ export const Navbar = () => {
         <div className="flex items-center gap-2.5">
           <ThemeToggle className="hidden" />
           <a href="/login" className="max-lg:hidden">
-            <Button variant="outline">
-              <span className="relative z-10">Login</span>
+            <Button variant="outline" size="sm">
+              Login
+            </Button>
+          </a>
+          <a href="/signup" className="max-lg:hidden">
+            <Button size="sm">
+              Sign Up
             </Button>
           </a>
 
@@ -154,7 +159,7 @@ export const Navbar = () => {
             : "invisible -translate-y-4 opacity-0",
         )}
       >
-        <nav className="divide-border flex flex-1 flex-col divide-y">
+        <nav className="divide-border flex flex-1 flex-col divide-y pb-4">
           {ITEMS.map((link) =>
             link.dropdownItems ? (
               <div key={link.label} className="py-4 first:pt-0 last:pb-0">
@@ -222,6 +227,20 @@ export const Navbar = () => {
             ),
           )}
         </nav>
+
+        {/* Mobile Auth Buttons */}
+        <div className="flex flex-col gap-3 pt-4 border-t border-border">
+          <a href="/login" className="w-full">
+            <Button variant="outline" className="w-full">
+              Login
+            </Button>
+          </a>
+          <a href="/signup" className="w-full">
+            <Button className="w-full">
+              Sign Up
+            </Button>
+          </a>
+        </div>
       </div>
     </section>
   );

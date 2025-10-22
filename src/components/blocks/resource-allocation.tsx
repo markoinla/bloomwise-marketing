@@ -37,12 +37,12 @@ const topItems = [
 
 const middleItems = [
   {
-    title: "Event planning tools",
+    title: "Event planning workspace",
     description:
       "that lets you manage tasks, budgets, and timelines for your floral events.",
     images: [
       {
-        src: "/resource-allocation/templates.webp",
+        src: "/app-screenshots/event-workspace.png",
         alt: "Issue template interface",
         width: 495,
         height: 186,
@@ -113,10 +113,9 @@ const bottomItems = [
       "that give you a clear overview of your upcoming orders and events.",
     images: [
       {
-        src: "/resource-allocation/discussions.webp",
+        src: "/app-screenshots/production-calendar.png",
         alt: "Task discussions interface",
-        width: 320,
-        height: 103,
+        width: 350,
       },
     ],
     className:
