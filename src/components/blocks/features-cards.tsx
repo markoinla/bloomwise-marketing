@@ -34,7 +34,7 @@ export const FeaturesCards = () => {
     <section className="overflow-hidden py-20 md:py-24 lg:py-28">
       <div className="container">
         <h2 className="mb-12 text-center text-3xl font-semibold tracking-tight sm:text-4xl md:mb-16 md:text-5xl lg:mb-20">
-          Easily manage every aspact of your floral business
+          Your floral studio runs better with Bloomwise
         </h2>
 
         <div className="relative mx-auto max-w-6xl">

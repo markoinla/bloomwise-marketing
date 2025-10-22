@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
-    <section className="py-24 md:py-32 lg:py-40 lg:pt-44">
+    <section className="py-24 md:py-32 lg:py-60">
       <div className="container">
         {/* Main content - centered */}
         <div className="mx-auto max-w-4xl text-center">
