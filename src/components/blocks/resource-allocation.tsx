@@ -6,7 +6,7 @@ const topItems = [
   {
     title: "AI Recipe Builder",
     description:
-      "helps you build your catalog of floral recipes and instructions in only a few clicks.",
+      "helps you build your catalog of floral recipes, stems, and instructions in only a few clicks.",
     images: [
       {
         src: "/app-screenshots/ai-recipe-builder.png",
@@ -53,41 +53,18 @@ const middleItems = [
     fade: [""],
   },
   {
-    title: "Stunning event proposals",
-    description: "that you can send to customers to win more business.",
+    title: "A native shopify integration",
+    description: "so you can keep your online store in sync with your production workflow and offline orders.",
     images: [
-      { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
-      { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
       {
-        src: "/logos/notion.svg",
-        alt: "Notion logo",
-        width: 48,
-        height: 48,
+        src: "/app-screenshots/shopify-integration.png",
+        alt: "Shopify integration interface",
+        width: 600,
       },
-      { src: "/logos/word.svg", alt: "Word logo", width: 48, height: 48 },
-      {
-        src: "/logos/monday.svg",
-        alt: "Monday logo",
-        width: 48,
-        height: 48,
-      },
-      {
-        src: "/logos/drive.svg",
-        alt: "Google Drive logo",
-        width: 48,
-        height: 48,
-      },
-      {
-        src: "/logos/jira.svg",
-        alt: "Jira logo",
-        width: 48,
-        height: 48,
-      },
-      { src: "/logos/asana.svg", alt: "Asana logo", width: 48, height: 48 },
     ],
     className:
-      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
-    fade: [],
+      "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 [&>.image-container]:flex [&>.image-container]:flex-1 [&>.image-container]:items-start xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+    fade: [""],
   },
 ];
 
