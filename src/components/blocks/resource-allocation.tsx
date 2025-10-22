@@ -95,7 +95,7 @@ const bottomItems = [
   {
     title: "Print order and delivery slips",
     description:
-      "that give your designers and drivers all the info they need.",
+      "that give your designers and drivers all the info they need including optimized delivery routes.",
     images: [
       {
         src: "/app-screenshots/order-slip.png",
@@ -108,9 +108,9 @@ const bottomItems = [
     fade: ["bottom"],
   },
   {
-    title: "Mobile designer view",
+    title: "Production calendars",
     description:
-      "that lets your designers see recipes, manage orders, and take pictures from their phone.",
+      "that give you a clear overview of your upcoming orders and events.",
     images: [
       {
         src: "/resource-allocation/discussions.webp",
@@ -124,15 +124,14 @@ const bottomItems = [
     fade: [""],
   },
   {
-    title: "Production calendars",
+    title: "Mobile designer view",
     description:
-      "that give you a clear overview of your upcoming orders and events.",
+      "that lets designers see recipes, manage orders, and take pictures from their phone.",
     images: [
       {
-        src: "/resource-allocation/notifications.webp",
+        src: "/app-screenshots/mobile-view.png",
         alt: "Notifications interface",
-        width: 305,
-        height: 280,
+        width: 240,
       },
     ],
     className:
