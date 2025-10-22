@@ -4,9 +4,42 @@ import { cn } from "@/lib/utils";
 
 const topItems = [
   {
-    title: "Reusable issue templates.",
+    title: "AI Recipe Builder",
     description:
-      "Draft lightning-fast documents with our Smart Instructions and Templates.",
+      "helps you build your catalog of floral recipes and instructions in only a few clicks.",
+    images: [
+      {
+        src: "/app-screenshots/ai-recipe-builder.png",
+        alt: "Issue template interface",
+        width: 400,
+      },
+    ],
+    className:
+      "flex-1 justify-start [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+    fade: [""],
+  },
+  {
+    title: "Flexible inventory management",
+    description: "that lets you see stock levels and create shopping lists.",
+    images: [
+      {
+        src: "/app-screenshots/inventory-management.png",
+        alt: "Inventory management interface",
+        width: 495,
+        height: 186,
+      },
+    ],
+    className:
+      "flex-1 justify-start [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 xl:[&>.image-container]:translate-x-6 [&>.image-container]:translate-x-2",
+    fade: [""],
+  },
+];
+
+const middleItems = [
+  {
+    title: "Event planning tools",
+    description:
+      "that lets you manage tasks, budgets, and timelines for your floral events.",
     images: [
       {
         src: "/resource-allocation/templates.webp",
@@ -20,8 +53,8 @@ const topItems = [
     fade: [""],
   },
   {
-    title: "Simplify your stack.",
-    description: "No more Confluence, SharePoint, or Microsoft Word.",
+    title: "Stunning event proposals",
+    description: "that you can send to customers to win more business.",
     images: [
       { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
       { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
@@ -60,15 +93,14 @@ const topItems = [
 
 const bottomItems = [
   {
-    title: "Graveyard it.",
+    title: "Print order and delivery slips",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.",
+      "that give your designers and drivers all the info they need.",
     images: [
       {
-        src: "/resource-allocation/graveyard.webp",
+        src: "/app-screenshots/order-slip.png",
         alt: "Graveyard interface",
         width: 305,
-        height: 280,
       },
     ],
     className:
@@ -76,9 +108,9 @@ const bottomItems = [
     fade: ["bottom"],
   },
   {
-    title: "Task discussions.",
+    title: "Mobile designer view",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "that lets your designers see recipes, manage orders, and take pictures from their phone.",
     images: [
       {
         src: "/resource-allocation/discussions.webp",
@@ -92,9 +124,9 @@ const bottomItems = [
     fade: [""],
   },
   {
-    title: "Notifications.",
+    title: "Production calendars",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
+      "that give you a clear overview of your upcoming orders and events.",
     images: [
       {
         src: "/resource-allocation/notifications.webp",
@@ -117,7 +149,7 @@ export const ResourceAllocation = () => {
     >
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Mainline your resource allocation and execution
+          Every tool you need to run your floral business smoothly
         </h2>
 
         <div className="mt-8 md:mt-12 lg:mt-20">
@@ -137,7 +169,7 @@ export const ResourceAllocation = () => {
             className="container max-w-7xl scale-x-110"
           />
 
-          {/* Bottom Features Grid - 3 items */}
+          {/* Middle Features Grid - 3 items */}
           <div className="relative container grid max-w-7xl md:grid-cols-3">
             {bottomItems.map((item, i) => (
               <Item
@@ -146,6 +178,17 @@ export const ResourceAllocation = () => {
                 isLast={i === bottomItems.length - 1}
                 className="md:pb-0"
               />
+            ))}
+          </div>
+          <DashedLine
+            orientation="horizontal"
+            className="container max-w-7xl scale-x-110"
+          />
+
+          {/* Bottom Features Grid - 2 items */}
+          <div className="relative container flex max-md:flex-col">
+            {middleItems.map((item, i) => (
+              <Item key={i} item={item} isLast={i === middleItems.length - 1} />
             ))}
           </div>
         </div>
@@ -223,7 +266,7 @@ const Item = ({ item, isLast, className }: ItemProps) => {
           </div>
         </div>
       ) : (
-        <div className="image-container grid grid-cols-1 gap-4">
+        <div className="image-container grid grid-cols-1 gap-4 self-start">
           {item.images.map((image, j) => (
             <img
               key={j}

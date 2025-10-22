@@ -40,21 +40,21 @@ export const Hero = () => {
         {/* Left side - Main content */}
         <div className="flex-1">
 
-          <p className="text-primary my-2 text-lg font-medium md:text-xl">
-            Built by florists, for florists.
+          <p className="text-primary my-2 font-medium md:text-xl">
+            Built by florists, for florists
           </p>
           <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
-            Make your floral business bloom
+            Let your business bloom
           </h1>
 
 
-          <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
-            Bloomwise is an AI-powered platform for managing every aspect of your floral business.
+          <p className="text-muted-foreground mt-5 text-xl md:text-2xl">
+            Bloomwise is an AI-powered platform that helps you manage and optimize every aspect of your floral business.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
             <Button asChild>
-              <a href={GITHUB_URL}>Get template</a>
+              <a href="#">Join the waitlist</a>
             </Button>
             <Button
               variant="outline"
@@ -62,10 +62,10 @@ export const Hero = () => {
               asChild
             >
               <a
-                href="https://shadcnblocks.com"
+                href="#"
                 className="max-w-56 truncate text-start md:max-w-none"
               >
-                Built by shadcnblocks.com
+                Sign up for a demo
                 <ArrowRight className="stroke-3" />
               </a>
             </Button>
