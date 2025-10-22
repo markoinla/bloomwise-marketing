@@ -1,6 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { GITHUB_URL } from "@/consts";
 
 export function Footer() {
@@ -21,57 +23,58 @@ export function Footer() {
 
   return (
     <footer className="flex flex-col items-center gap-14 pt-28 lg:pt-32">
-      <div className="container space-y-3 text-center">
+      <div className="container max-w-3xl space-y-6 text-center">
         <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-          Start your free trial today
+          Join the waitlist
         </h2>
         <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-          Mainline is the fit-for-purpose tool for planning and building modern
-          software products.
+          Be the first to know when Bloomwise launches. Get early access and exclusive updates.
         </p>
-        <div>
-          <Button size="lg" className="mt-4" asChild>
-            <a href={GITHUB_URL}>Get template</a>
-          </Button>
-        </div>
+
+        {/* Waitlist Form */}
+        <form className="mx-auto max-w-2xl space-y-4 pt-4">
+          <div className="grid gap-4 md:grid-cols-2">
+            <Input
+              id="footer-fullName"
+              name="fullName"
+              type="text"
+              placeholder="Full Name"
+              required
+              className="h-11"
+            />
+            <Input
+              id="footer-email"
+              name="email"
+              type="email"
+              placeholder="Email"
+              required
+              className="h-11"
+            />
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Input
+              id="footer-company"
+              name="company"
+              type="text"
+              placeholder="Company (optional)"
+              className="h-11"
+            />
+            <Input
+              id="footer-website"
+              name="website"
+              type="url"
+              placeholder="Website (optional)"
+              className="h-11"
+            />
+          </div>
+          <div className="flex justify-center pt-2">
+            <Button type="submit" size="lg" className="min-w-48">
+              Join the waitlist
+            </Button>
+          </div>
+        </form>
       </div>
 
-      <nav className="container flex flex-col items-center gap-4">
-        <ul className="flex flex-wrap items-center justify-center gap-6">
-          {navigation.map((item) => (
-            <li key={item.name}>
-              <a
-                href={item.href}
-                className="font-medium transition-opacity hover:opacity-75"
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-          {social.map((item) => (
-            <li key={item.name}>
-              <a
-                href={item.href}
-                className="flex items-center gap-0.5 font-medium transition-opacity hover:opacity-75"
-              >
-                {item.name} <ArrowUpRight className="size-4" />
-              </a>
-            </li>
-          ))}
-        </ul>
-        <ul className="flex flex-wrap items-center justify-center gap-6">
-          {legal.map((item) => (
-            <li key={item.name}>
-              <a
-                href={item.href}
-                className="text-muted-foreground text-sm transition-opacity hover:opacity-75"
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
 
       <div className="mt-10 w-full max-w-[1400px] mx-auto md:mt-14 lg:mt-20">
         <svg

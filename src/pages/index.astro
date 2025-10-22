@@ -10,6 +10,7 @@ import { Logos } from '@/components/blocks/logos';
 import { Pricing } from '@/components/blocks/pricing';
 import { ResourceAllocation } from '@/components/blocks/resource-allocation';
 import { Testimonials } from '@/components/blocks/testimonials';
+import { Waitlist } from '@/components/blocks/waitlist';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
 
@@ -21,6 +22,5 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
     <Hero />
     <FeaturesCards client:only='react'/>
     <ResourceAllocation />
-    <FAQ client:only='react'/>
   </Background>
 </DefaultLayout>
