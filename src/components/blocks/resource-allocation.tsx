@@ -120,11 +120,11 @@ export const ResourceAllocation = () => {
   return (
     <section
       id="resource-allocation"
-      className="overflow-hidden pb-28 lg:pb-32"
+      className="overflow-hidden py-20 md:py-24 lg:py-28"
     >
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Every tool you need to run your floral business smoothly
+          Every tool you need to run your floral business efficiently
         </h2>
 
         <div className="mt-8 md:mt-12 lg:mt-20">

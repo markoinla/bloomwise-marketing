@@ -4,6 +4,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { Background } from '@/components/background';
 import { FAQ } from '@/components/blocks/faq';
 import { Features } from '@/components/blocks/features';
+import { FeaturesCards } from '@/components/blocks/features-cards';
 import { Hero } from '@/components/blocks/hero';
 import { Logos } from '@/components/blocks/logos';
 import { Pricing } from '@/components/blocks/pricing';
@@ -18,9 +19,8 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
   <Background className="via-muted to-muted/80">
     <Hero />
+    <FeaturesCards client:only='react'/>
     <ResourceAllocation />
-  </Background>
-  <Background variant="bottom">
     <FAQ client:only='react'/>
   </Background>
 </DefaultLayout>

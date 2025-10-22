@@ -1,116 +1,54 @@
-import {
-  ArrowRight,
-  Workflow,
-  Package,
-  CalendarCheck,
-  ShoppingBag,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
-import { GITHUB_URL } from "@/consts";
-
-const features = [
-  {
-    title: "Manage your end-to-end production workflow",
-    description: "From orders and design, to delivery routes, optimize every aspect of your business.",
-    icon: Workflow,
-  },
-  {
-    title: "Smart Recipe & inventory management",
-    description: "Easy-to-use AI recipe builder powered by an extensive flower database.",
-    icon: Package,
-  },
-  {
-    title: "Stress free floral event planning",
-    description: "Plan and execute flawless events with task and cost management tools.",
-    icon: CalendarCheck,
-  },
-  {
-    title: "Shopify Integration",
-    description: "Seamlessly connect your online store to streamline your online production management.",
-    icon: ShoppingBag,
-  },
-];
 
 export const Hero = () => {
   return (
-    <section className="py-28 lg:py-32 lg:pt-44">
-      <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
-        {/* Left side - Main content */}
-        <div className="flex-1">
-
-          <p className="text-primary my-2 font-medium md:text-xl">
+    <section className="py-24 md:py-32 lg:py-40 lg:pt-44">
+      <div className="container">
+        {/* Main content - centered */}
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="text-primary mb-4 font-medium md:text-xl">
             Built by florists, for florists
           </p>
-          <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
+          <h1 className="text-foreground mx-auto text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
             Let your business bloom
           </h1>
 
-
-          <p className="text-muted-foreground mt-5 text-xl md:text-2xl">
+          <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg md:text-xl lg:text-2xl">
             Bloomwise is an AI-powered platform that helps you manage and optimize every aspect of your floral business.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
-            <Button asChild>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <Button size="lg" asChild>
               <a href="#">Join the waitlist</a>
             </Button>
             <Button
+              size="lg"
               variant="outline"
-              className="from-background h-auto gap-2 bg-linear-to-r to-transparent shadow-md"
+              className="from-background gap-2 bg-linear-to-r to-transparent shadow-md"
               asChild
             >
-              <a
-                href="#"
-                className="max-w-56 truncate text-start md:max-w-none"
-              >
+              <a href="#">
                 Sign up for a demo
-                <ArrowRight className="stroke-3" />
+                <ArrowRight className="size-5" strokeWidth={2} />
               </a>
             </Button>
           </div>
         </div>
 
-        {/* Right side - Features */}
-        <div className="relative flex flex-1 flex-col justify-center space-y-5 max-lg:pt-10 lg:pl-10">
-          <DashedLine
-            orientation="vertical"
-            className="absolute top-0 left-0 max-lg:hidden"
-          />
-          <DashedLine
-            orientation="horizontal"
-            className="absolute top-0 lg:hidden"
-          />
-          {features.map((feature) => {
-            const Icon = feature.icon;
-            return (
-              <div key={feature.title} className="flex gap-2.5 lg:gap-5">
-                <Icon className="text-primary mt-1 size-4 shrink-0 lg:size-5" />
-                <div>
-                  <h2 className="font-text text-foreground font-semibold">
-                    {feature.title}
-                  </h2>
-                  <p className="text-muted-foreground max-w-76 text-sm">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      <div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
-        <div className="relative h-[793px] w-full">
-          <video
-            src="https://pub-faf0922fa8834bc78dc4ad5d963b77c7.r2.dev/website-assets/design-demo.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
-          />
+        {/* Video demo */}
+        <div className="mt-16 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:mt-24">
+          <div className="relative h-[793px] w-full">
+            <video
+              src="https://pub-faf0922fa8834bc78dc4ad5d963b77c7.r2.dev/website-assets/design-demo.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
+            />
+          </div>
         </div>
       </div>
     </section>

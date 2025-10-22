@@ -1,20 +1,20 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "Mainline - Modern Astro Template";
+export const SITE_TITLE = "Bloomwise - Professional Florist Software";
 export const SITE_DESCRIPTION =
-  "A modern, fully featured Astro template built with Shadcn/UI, TailwindCSS and TypeScript, perfect for your next web application.";
+  "Bloomwise is a comprehensive florist software solution designed to streamline your floral business operations, from inventory management to customer relations.";
 
 export const GITHUB_URL =
   "https://github.com/shadcnblocks/mainline-astro-template";
 
 export const SITE_METADATA = {
   title: {
-    default: "Mainline - Modern Astro Template",
+    default: "Bloomwise - Professional Florist Software",
     template: "%s | Mainline",
   },
   description:
-    "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+    "Bloomwise is a comprehensive florist software solution designed to streamline your floral business operations, from inventory management to customer relations.",
   keywords: [
     "Astro",
     "astro template",
@@ -30,9 +30,9 @@ export const SITE_METADATA = {
     "mdx theme",
     "mdx starter",
   ],
-  authors: [{ name: "shadcnblocks.com" }],
-  creator: "shadcnblocks.com",
-  publisher: "shadcnblocks.com",
+  authors: [{ name: "Bloomwise.co" }],
+  creator: "Bloomwise.co",
+  publisher: "Bloomwise.co",
   robots: {
     index: true,
     follow: true,
@@ -49,9 +49,9 @@ export const SITE_METADATA = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "Mainline - Modern Astro Template",
+    title: "Bloomwise - Professional Florist Software",
     description:
-      "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+      "Bloomwise is a comprehensive florist software solution designed to streamline your floral business operations, from inventory management to customer relations.",
     siteName: "Mainline",
     images: [
       {
@@ -64,10 +64,10 @@ export const SITE_METADATA = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mainline - Modern Astro Template",
+    title: "Bloomwise - Professional Florist Software",
     description:
-      "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+      "Bloomwise is a comprehensive florist software solution designed to streamline your floral business operations, from inventory management to customer relations.",
     images: ["/og-image.jpg"],
-    creator: "@ausrobdev",
+    creator: "Bloomwise.co",
   },
 };
