@@ -109,7 +109,7 @@ export const Navbar = () => {
                     {link.label}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[900px] p-4">
+                    <div className="w-[900px] p-2">
                       <div className="grid grid-cols-[1fr_1fr_300px] gap-8">
                         {/* First Column - Features 1-3 */}
                         <div>
@@ -169,12 +169,13 @@ export const Navbar = () => {
                           </ul>
                         </div>
 
-                        {/* Third Column - Placeholder Image */}
-                        <div className="bg-muted flex items-center justify-center rounded-lg">
-                          <div className="text-muted-foreground text-center text-sm">
-                            <div className="mb-2 text-4xl">🖼️</div>
-                            <div>Placeholder Image</div>
-                          </div>
+                        {/* Third Column - CTA Image */}
+                        <div className="flex items-center justify-center p-4">
+                          <img
+                            src="/nav-cta.jpg"
+                            alt="CTA"
+                            className="h-full w-full rounded-2xl object-cover"
+                          />
                         </div>
                       </div>
 
