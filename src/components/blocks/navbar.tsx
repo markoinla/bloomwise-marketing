@@ -1,6 +1,14 @@
 import { useState, useEffect } from "react";
 
-import { ChevronRight } from "lucide-react";
+import {
+  ChevronRight,
+  Workflow,
+  Package,
+  CalendarCheck,
+  ShoppingBag,
+  Printer,
+  Calendar
+} from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -18,23 +26,51 @@ const ITEMS = [
   {
     label: "Features",
     href: "#features",
-    dropdownItems: [
-      {
-        title: "Modern product teams",
-        href: "/#feature-modern-teams",
-        description:
-          "Mainline is built on the habits that make the best product teams successful",
-      },
-      {
-        title: "Resource Allocation",
-        href: "/#resource-allocation",
-        description: "Mainline your resource allocation and execution",
-      },
-    ],
+    megamenu: true,
   },
   { label: "About Us", href: "/about" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
+];
+
+// Megamenu content
+const MEGAMENU_FEATURES = [
+  {
+    title: "AI Recipe Builder",
+    description: "Build your catalog of floral recipes in only a few clicks",
+    icon: Workflow,
+    href: "/#resource-allocation",
+  },
+  {
+    title: "Inventory Management",
+    description: "See stock levels and create shopping lists",
+    icon: Package,
+    href: "/#resource-allocation",
+  },
+  {
+    title: "Event Planning",
+    description: "Manage tasks, budgets, and timelines for floral events",
+    icon: CalendarCheck,
+    href: "/#resource-allocation",
+  },
+  {
+    title: "Shopify Integration",
+    description: "Keep your online store in sync with production workflow",
+    icon: ShoppingBag,
+    href: "/#resource-allocation",
+  },
+  {
+    title: "Order & Delivery Tools",
+    description: "Print slips with all info including optimized routes",
+    icon: Printer,
+    href: "/#resource-allocation",
+  },
+  {
+    title: "Production Calendars",
+    description: "Clear overview of your upcoming orders and events",
+    icon: Calendar,
+    href: "/#resource-allocation",
+  },
 ];
 
 export const Navbar = () => {
@@ -67,31 +103,100 @@ export const Navbar = () => {
         <NavigationMenu className="max-lg:hidden">
           <NavigationMenuList>
             {ITEMS.map((link) =>
-              link.dropdownItems ? (
+              link.megamenu ? (
                 <NavigationMenuItem key={link.label} className="">
                   <NavigationMenuTrigger className="data-[state=open]:bg-accent/50 bg-transparent! px-1.5">
                     {link.label}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="w-[400px] space-y-2 p-4">
-                      {link.dropdownItems.map((item) => (
-                        <li key={item.title}>
-                          <a
-                            href={item.href}
-                            className="group hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex items-center gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors select-none"
-                          >
-                            <div className="space-y-1.5 transition-transform duration-300 group-hover:translate-x-1">
-                              <div className="text-sm leading-none font-medium">
-                                {item.title}
-                              </div>
-                              <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-                                {item.description}
-                              </p>
-                            </div>
+                    <div className="w-[900px] p-4">
+                      <div className="grid grid-cols-[1fr_1fr_300px] gap-8">
+                        {/* First Column - Features 1-3 */}
+                        <div>
+                          <ul className="space-y-1">
+                            {MEGAMENU_FEATURES.slice(0, 3).map((item) => {
+                              const Icon = item.icon;
+                              return (
+                                <li key={item.title}>
+                                  <a
+                                    href={item.href}
+                                    className="hover:bg-accent group flex items-start gap-3 rounded-lg p-3 transition-colors"
+                                  >
+                                    <div className="text-primary flex size-10 shrink-0 items-center justify-center">
+                                      <Icon className="size-5" strokeWidth={2} />
+                                    </div>
+                                    <div className="space-y-1">
+                                      <div className="text-sm font-medium leading-none">
+                                        {item.title}
+                                      </div>
+                                      <p className="text-muted-foreground text-xs leading-relaxed">
+                                        {item.description}
+                                      </p>
+                                    </div>
+                                  </a>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+
+                        {/* Second Column - Features 4-6 */}
+                        <div>
+                          <ul className="space-y-1">
+                            {MEGAMENU_FEATURES.slice(3, 6).map((item) => {
+                              const Icon = item.icon;
+                              return (
+                                <li key={item.title}>
+                                  <a
+                                    href={item.href}
+                                    className="hover:bg-accent group flex items-start gap-3 rounded-lg p-3 transition-colors"
+                                  >
+                                    <div className="text-primary flex size-10 shrink-0 items-center justify-center">
+                                      <Icon className="size-5" strokeWidth={2} />
+                                    </div>
+                                    <div className="space-y-1">
+                                      <div className="text-sm font-medium leading-none">
+                                        {item.title}
+                                      </div>
+                                      <p className="text-muted-foreground text-xs leading-relaxed">
+                                        {item.description}
+                                      </p>
+                                    </div>
+                                  </a>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+
+                        {/* Third Column - Placeholder Image */}
+                        <div className="bg-muted flex items-center justify-center rounded-lg">
+                          <div className="text-muted-foreground text-center text-sm">
+                            <div className="mb-2 text-4xl">🖼️</div>
+                            <div>Placeholder Image</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* CTA Banner at bottom */}
+                      <div className="bg-muted mt-6 rounded-lg p-4">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h4 className="text-sm font-semibold">
+                              Ready to get started?
+                            </h4>
+                            <p className="text-muted-foreground text-xs">
+                              Join the waitlist and be the first to know when we launch
+                            </p>
+                          </div>
+                          <a href="/#waitlist">
+                            <Button size="sm" className="shrink-0">
+                              Join Waitlist
+                            </Button>
                           </a>
-                        </li>
-                      ))}
-                    </ul>
+                        </div>
+                      </div>
+                    </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               ) : (
@@ -160,7 +265,7 @@ export const Navbar = () => {
       >
         <nav className="divide-border flex flex-1 flex-col divide-y pb-4">
           {ITEMS.map((link) =>
-            link.dropdownItems ? (
+            link.megamenu ? (
               <div key={link.label} className="py-4 first:pt-0 last:pb-0">
                 <button
                   onClick={() =>
@@ -182,32 +287,37 @@ export const Navbar = () => {
                   className={cn(
                     "overflow-hidden transition-all duration-300",
                     openDropdown === link.label
-                      ? "mt-4 max-h-[1000px] opacity-100"
+                      ? "mt-4 max-h-[2000px] opacity-100"
                       : "max-h-0 opacity-0",
                   )}
                 >
-                  <div className="bg-muted/50 space-y-3 rounded-lg p-4">
-                    {link.dropdownItems.map((item) => (
-                      <a
-                        key={item.title}
-                        href={item.href}
-                        className="hover:bg-accent group block rounded-md p-2 transition-colors"
-                        onClick={() => {
-                          setIsMenuOpen(false);
-                          setOpenDropdown(null);
-                        }}
-                      >
-                        <div className="transition-transform duration-200 group-hover:translate-x-1">
-                          <div className="text-primary font-medium">
-                            {item.title}
+                  <div className="bg-muted/50 space-y-2 rounded-lg p-4">
+                    {MEGAMENU_FEATURES.map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <a
+                          key={item.title}
+                          href={item.href}
+                          className="hover:bg-accent group flex items-start gap-3 rounded-md p-2 transition-colors"
+                          onClick={() => {
+                            setIsMenuOpen(false);
+                            setOpenDropdown(null);
+                          }}
+                        >
+                          <div className="text-primary flex size-8 shrink-0 items-center justify-center">
+                            <Icon className="size-4" strokeWidth={2} />
                           </div>
-
-                          <p className="text-muted-foreground mt-1 text-sm">
-                            {item.description}
-                          </p>
-                        </div>
-                      </a>
-                    ))}
+                          <div>
+                            <div className="text-primary text-sm font-medium">
+                              {item.title}
+                            </div>
+                            <p className="text-muted-foreground mt-0.5 text-xs">
+                              {item.description}
+                            </p>
+                          </div>
+                        </a>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
