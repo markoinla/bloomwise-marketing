@@ -61,3 +61,8 @@ jobs:
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
         run: |
           curl -X POST https://dev.marko.la/api/deploy/e_iAa3XpeF8WOgds--Us2
+        
+      - name: Trigger dev0 Dokploy deployment
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        run: |
+          curl -X POST https://dev0.marko.la/api/deploy/Z9bxB24IE3SYB0OWgkmOh
