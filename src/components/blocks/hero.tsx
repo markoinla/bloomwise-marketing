@@ -8,7 +8,7 @@ export const Hero = () => {
       <div className="container">
         {/* Main content - centered */}
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-primary mb-4 font-medium md:text-xl">
+          <p className="text-primary mb-4 font-medium tracking-wide md:text-xl">
             Built by florists, for florists
           </p>
           <h1 className="text-foreground mx-auto text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
@@ -20,13 +20,13 @@ export const Hero = () => {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Button size="lg" asChild>
+            <Button size="lg" className="hover:scale-105 transition-transform duration-300" asChild>
               <a href="#">Join the waitlist</a>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="from-background gap-2 bg-linear-to-r to-transparent shadow-md"
+              className="from-background gap-2 bg-linear-to-r to-transparent shadow-md hover:scale-105 transition-transform duration-300"
               asChild
             >
               <a href="#">
@@ -39,14 +39,14 @@ export const Hero = () => {
 
         {/* Video demo */}
         <div className="mt-16 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:mt-24">
-          <div className="relative h-[793px] w-full">
+          <div className="relative h-[793px] w-full rounded-2xl border border-border/50 shadow-2xl overflow-hidden">
             <video
               src="https://pub-faf0922fa8834bc78dc4ad5d963b77c7.r2.dev/website-assets/design-demo.mp4"
               autoPlay
               loop
               muted
               playsInline
-              className="w-full rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
+              className="w-full h-full object-cover object-left-top"
             />
           </div>
         </div>

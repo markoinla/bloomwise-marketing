@@ -243,14 +243,15 @@ const Item = ({ item, isLast, className }: ItemProps) => {
       ) : (
         <div className="image-container grid grid-cols-1 gap-4 self-start">
           {item.images.map((image, j) => (
-            <img
-              key={j}
-              src={image.src}
-              alt={image.alt}
-              width={image.width}
-              height={image.height}
-              className="object-contain object-left-top"
-            />
+            <div key={j} className="rounded-xl border border-border/50 shadow-sm overflow-hidden bg-background">
+                <img
+                src={image.src}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+                className="object-contain object-left-top w-full h-auto"
+                />
+            </div>
           ))}
         </div>
       )}

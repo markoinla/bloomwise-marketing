@@ -15,60 +15,39 @@ import { cn } from "@/lib/utils";
 
 const items = [
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
+    quote: "I use Bloomwise to manage all my wedding proposals. It's a lifesaver.",
     author: "Amy Chase",
-    role: "PM",
-    company: "Mercury Finance",
+    role: "Owner",
+    company: "Petal & Stem",
     image: "/testimonials/amy-chase.webp",
   },
   {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
+    quote: "Bloomwise helped me cut my admin time in half. Highly recommended.",
     author: "Jonas Kotara",
-    role: "Lead Engineer",
-    company: "Mercury Finance",
+    role: "Lead Florist",
+    company: "Rosewood Floral",
     image: "/testimonials/jonas-kotara.webp",
   },
   {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
+    quote: "Finally a tool that understands how florists actually work.",
     author: "Kevin Yam",
-    role: "Founder",
-    company: "Mercury Finance",
+    role: "Creative Director",
+    company: "The Garden Studio",
     image: "/testimonials/kevin-yam.webp",
   },
   {
-    quote: "I can use the tool as a substitute from my PM.",
+    quote: "Inventory management used to be a nightmare. Now it's a breeze.",
     author: "Kundo Marta",
     role: "Founder",
-    company: "Mercury Finance",
+    company: "Blooms & Co",
     image: "/testimonials/kundo-marta.webp",
   },
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
-    author: "Amy Chase",
-    role: "PM",
-    company: "Mercury Finance",
+    quote: "The event planning workspace is exactly what I needed.",
+    author: "Sarah Jen",
+    role: "Event Planner",
+    company: "Floral Dreams",
     image: "/testimonials/amy-chase.webp",
-  },
-  {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
-    author: "Jonas Kotara",
-    role: "Lead Engineer",
-    company: "Mercury Finance",
-    image: "/testimonials/jonas-kotara.webp",
-  },
-  {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
-    author: "Kevin Yam",
-    role: "Founder",
-    company: "Mercury Finance",
-    image: "/testimonials/kevin-yam.webp",
-  },
-  {
-    quote: "I can use the tool as a substitute from my PM.",
-    author: "Kundo Marta",
-    role: "Founder",
-    company: "Mercury Finance",
-    image: "/testimonials/kundo-marta.webp",
   },
 ];
 
@@ -85,12 +64,11 @@ export const Testimonials = ({
         <div className="container">
           <div className="space-y-4">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              Trusted by product builders
+              Loved by florists everywhere
             </h2>
             <p className="text-muted-foreground max-w-md leading-snug">
-              Mainline is built on the habits that make the best product teams
-              successful: staying focused, moving quickly, and always aiming for
-              high-quality work.
+              Bloomwise is built on the habits that make the best floral businesses
+              successful: staying organized, minimizing waste, and delighting customers.
             </p>
             <Button variant="outline" className="shadow-md">
               Read our Customer Stories <ArrowRight className="size-4" />

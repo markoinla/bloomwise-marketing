@@ -69,7 +69,7 @@ export const FeaturesCards = () => {
                         isEven ? "md:justify-end md:pr-8 lg:pr-12" : "md:justify-start md:pl-8 lg:pl-12"
                       }`}
                     >
-                      <div className="bg-background relative z-10 flex size-20 items-center justify-center rounded-2xl border-2 border-primary/20 shadow-lg md:size-24 lg:size-28">
+                      <div className="bg-background relative z-10 flex size-20 items-center justify-center rounded-2xl border border-primary/10 shadow-xl md:size-24 lg:size-28">
                         <Icon className="text-primary size-10 md:size-12 lg:size-14" strokeWidth={1.5} />
                       </div>
                     </div>
@@ -79,10 +79,10 @@ export const FeaturesCards = () => {
                       isEven ? "md:pl-0" : "md:pr-0"
                     }`}>
                       <div className="space-y-3">
-                        <h3 className="text-foreground text-xl font-semibold md:text-2xl">
+                        <h3 className="text-foreground text-xl font-semibold md:text-2xl text-balance">
                           {feature.title}
                         </h3>
-                        <p className="text-muted-foreground text-base md:text-lg">
+                        <p className="text-muted-foreground text-base md:text-lg text-pretty">
                           {feature.description}
                         </p>
                       </div>

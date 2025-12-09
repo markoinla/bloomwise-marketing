@@ -1,92 +1,170 @@
-import { ChevronRight } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import {
+  Workflow,
+  Package,
+  CalendarCheck,
+  ShoppingBag,
+  type LucideIcon,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
 
-import { DashedLine } from "../dashed-line";
+interface Feature {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  image: string;
+}
 
-import { Card, CardContent } from "@/components/ui/card";
-
-const items = [
+const features: Feature[] = [
   {
-    title: "Purpose-built for product development",
-    image: "/features/triage-card.svg",
+    title: "End-to-end production workflow",
+    description: "From orders and design, to delivery routes, optimize every aspect of your business.",
+    icon: Workflow,
+    image: "/app-screenshots/production-calendar.png",
   },
   {
-    title: "Manage projects end-to-end",
-    image: "/features/cycle-card.svg",
+    title: "Smart Recipe & inventory",
+    description: "Easy-to-use AI recipe builder powered by an extensive flower database.",
+    icon: Package,
+    image: "/app-screenshots/ai-recipe-builder.png",
   },
   {
-    title: "Build momentum and healthy habits",
-    image: "/features/overview-card.svg",
+    title: "Stress free event planning",
+    description: "Plan and execute flawless events with task and cost management tools.",
+    icon: CalendarCheck,
+    image: "/app-screenshots/event-workspace.png",
+  },
+  {
+    title: "Shopify Integration",
+    description: "Seamlessly connect your online store to streamline your online production management.",
+    icon: ShoppingBag,
+    image: "/app-screenshots/shopify-integration.png",
   },
 ];
 
 export const Features = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Auto-rotate tabs
+  useEffect(() => {
+    if (isHovering) {
+      if (timerRef.current) clearInterval(timerRef.current);
+      return;
+    }
+
+    timerRef.current = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % features.length);
+    }, 5000);
+
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [isHovering]);
+
   return (
-    <section id="feature-modern-teams" className="pb-28 lg:pb-32">
+    <section className="py-24 md:py-32">
       <div className="container">
-        {/* Top dashed line with text */}
-        <div className="relative flex items-center justify-center">
-          <DashedLine className="text-muted-foreground" />
-          <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
-            MEASURE TWICE. CUT ONCE.
-          </span>
-        </div>
+        <h2 className="mb-12 text-center text-3xl font-semibold tracking-tight sm:text-4xl md:mb-16 md:text-5xl lg:mb-20">
+          Your floral studio runs better with Bloomwise
+        </h2>
 
-        {/* Content */}
-        <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
-          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Made for modern product teams
-          </h2>
-          <p className="text-muted-foreground leading-snug">
-            Mainline is built on the habits that make the best product teams
-            successful: staying focused, moving quickly, and always aiming for
-            high-quality work.
-          </p>
-        </div>
+        <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
+          {/* Left Column: Tabs */}
+          <div className="flex flex-col gap-4 lg:col-span-5">
+            {features.map((feature, index) => {
+              const isActive = activeIndex === index;
+              const Icon = feature.icon;
 
-        {/* Features Card */}
-        <Card className="mt-8 rounded-3xl md:mt-12 lg:mt-20">
-          <CardContent className="flex p-0 max-md:flex-col">
-            {items.map((item, i) => (
-              <div key={i} className="flex flex-1 max-md:flex-col">
-                <div className="flex-1 p-4 pe-0! md:p-6">
-                  <div className="relative aspect-[1.28/1] overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={`${item.title} interface`}
-                      className="object-cover object-left-top ps-4 pt-2"
-                    />
-                    <div className="from-background absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
-                  </div>
-
-                  <a
-                    href="#"
-                    className={
-                      "group flex items-center justify-between gap-4 pe-4 pt-4 md:pe-6 md:pt-6"
-                    }
-                  >
-                    <h3 className="font-display max-w-60 text-2xl leading-tight font-bold tracking-tight">
-                      {item.title}
-                    </h3>
-                    <div className="rounded-full border p-2">
-                      <ChevronRight className="size-6 transition-transform group-hover:translate-x-1 lg:size-9" />
+              return (
+                <div
+                  key={index}
+                  className={cn(
+                    "group relative cursor-pointer rounded-2xl p-6 transition-all duration-300",
+                    isActive ? "bg-muted" : "hover:bg-muted/50"
+                  )}
+                  onClick={() => setActiveIndex(index)}
+                  onMouseEnter={() => {
+                    setIsHovering(true);
+                    setActiveIndex(index);
+                  }}
+                  onMouseLeave={() => setIsHovering(false)}
+                >
+                  <div className="flex gap-4">
+                    <div className={cn(
+                        "flex size-12 shrink-0 items-center justify-center rounded-lg border transition-colors",
+                        isActive ? "bg-background border-primary text-primary shadow-sm" : "bg-muted border-transparent text-muted-foreground group-hover:bg-background"
+                    )}>
+                      <Icon className="size-6" />
                     </div>
-                  </a>
+                    <div className="space-y-1">
+                      <h3 className={cn(
+                          "font-semibold leading-none transition-colors",
+                          isActive ? "text-foreground" : "text-muted-foreground group-hover:text-foreground"
+                      )}>
+                        {feature.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                  {/* Progress bar for active state */}
+                  {isActive && (
+                      <div className="absolute bottom-0 left-6 right-6 h-0.5 bg-border overflow-hidden rounded-full mt-4 max-lg:hidden">
+                          <div className="h-full bg-primary animate-progress origin-left" style={{ animationDuration: '5000ms' }} />
+                      </div>
+                  )}
+                  
+                  {/* Mobile: Show image inside the card when active (or always) */}
+                  <div className={cn("mt-6 overflow-hidden rounded-lg border bg-background shadow-sm lg:hidden", isActive ? "block" : "hidden")}>
+                     <img 
+                        src={feature.image} 
+                        alt={feature.title} 
+                        className="w-full object-cover object-top" 
+                     />
+                  </div>
                 </div>
-                {i < items.length - 1 && (
-                  <div className="relative hidden md:block">
-                    <DashedLine orientation="vertical" />
-                  </div>
-                )}
-                {i < items.length - 1 && (
-                  <div className="relative block md:hidden">
-                    <DashedLine orientation="horizontal" />
-                  </div>
-                )}
-              </div>
-            ))}
-          </CardContent>
-        </Card>
+              );
+            })}
+          </div>
+
+          {/* Right Column: Visual Area (Desktop Only) */}
+          <div className="relative hidden lg:col-span-7 lg:block">
+            <div className="sticky top-24 overflow-hidden rounded-2xl border bg-muted/30 shadow-2xl">
+               <div className="aspect-[4/3] w-full relative">
+                  {features.map((feature, index) => (
+                      <div
+                        key={index}
+                        className={cn(
+                            "absolute inset-0 transition-opacity duration-500 flex items-center justify-center p-8",
+                            activeIndex === index ? "opacity-100 z-10" : "opacity-0 z-0"
+                        )}
+                      >
+                         <img 
+                            src={feature.image} 
+                            alt={feature.title} 
+                            className="w-full h-full object-contain object-center rounded-lg shadow-sm bg-background border ring-1 ring-border/10" 
+                         />
+                      </div>
+                  ))}
+               </div>
+            </div>
+          </div>
+        </div>
       </div>
+      
+      <style>{`
+        @keyframes progress {
+          from { transform: scaleX(0); }
+          to { transform: scaleX(1); }
+        }
+        .animate-progress {
+          animation-name: progress;
+          animation-timing-function: linear;
+        }
+      `}</style>
     </section>
   );
 };
