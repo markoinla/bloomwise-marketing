@@ -1,0 +1,14 @@
+---
+import { Background } from '@/components/background';
+import { OrdersFeaturePage } from '@/components/blocks/orders-feature-page';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+
+const title = "Order Management | Bloomwise";
+const description = "Manage every order from intake to delivery. Track status, payments, and fulfillment across all channels—Shopify, phone, walk-in, and events.";
+---
+
+<DefaultLayout title={title} description={description}>
+  <Background className="via-muted/50 to-muted/30">
+    <OrdersFeaturePage client:load />
+  </Background>
+</DefaultLayout>

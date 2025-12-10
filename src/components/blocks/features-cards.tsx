@@ -4,6 +4,7 @@ import {
   CalendarCheck,
   ShoppingBag,
 } from "lucide-react";
+
 import { DashedLine } from "../dashed-line";
 
 const features = [

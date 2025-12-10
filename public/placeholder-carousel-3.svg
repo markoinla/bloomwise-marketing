@@ -1,0 +1,21 @@
+<svg width="200" height="160" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Spiral/growth element -->
+  <path d="M100 130 Q80 100 100 80 Q120 60 100 40 Q80 20 60 30" stroke="#86EFAC" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Coins -->
+  <ellipse cx="145" cy="45" rx="18" ry="6" fill="#FCD34D"/>
+  <rect x="127" y="40" width="36" height="5" fill="#FCD34D"/>
+  <ellipse cx="145" cy="40" rx="18" ry="6" fill="#FDE68A"/>
+
+  <ellipse cx="55" cy="55" rx="14" ry="5" fill="#FCD34D"/>
+  <rect x="41" y="50" width="28" height="5" fill="#FCD34D"/>
+  <ellipse cx="55" cy="50" rx="14" ry="5" fill="#FDE68A"/>
+
+  <!-- Leaves -->
+  <path d="M55 25 Q65 20 70 30 Q65 35 55 30 Z" fill="#86EFAC"/>
+  <path d="M145 65 Q155 60 160 70 Q155 75 145 70 Z" fill="#86EFAC"/>
+
+  <!-- Decorative elements -->
+  <circle cx="170" cy="90" r="4" fill="#BAE6FD" opacity="0.6"/>
+  <circle cx="30" cy="85" r="5" fill="#BAE6FD" opacity="0.6"/>
+</svg>

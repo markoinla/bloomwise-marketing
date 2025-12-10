@@ -1,0 +1,16 @@
+<svg width="200" height="160" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cloud shape -->
+  <ellipse cx="100" cy="90" rx="60" ry="40" fill="#E0F2FE"/>
+  <ellipse cx="65" cy="85" rx="35" ry="30" fill="#E0F2FE"/>
+  <ellipse cx="140" cy="88" rx="30" ry="25" fill="#E0F2FE"/>
+
+  <!-- Lock icon -->
+  <rect x="85" y="70" width="30" height="25" rx="3" fill="#7DD3FC" stroke="#0EA5E9" stroke-width="2"/>
+  <path d="M90 70V62C90 56.477 94.477 52 100 52C105.523 52 110 56.477 110 62V70" stroke="#0EA5E9" stroke-width="3" fill="none"/>
+  <circle cx="100" cy="82" r="4" fill="#0EA5E9"/>
+
+  <!-- Decorative elements -->
+  <circle cx="45" cy="50" r="8" fill="#BAE6FD" opacity="0.6"/>
+  <circle cx="160" cy="55" r="6" fill="#BAE6FD" opacity="0.6"/>
+  <path d="M30 100 Q50 80 70 100" stroke="#7DD3FC" stroke-width="2" fill="none" opacity="0.5"/>
+</svg>

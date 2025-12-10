@@ -3,12 +3,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import { Background } from '@/components/background';
 import { FAQ } from '@/components/blocks/faq';
+import { FeatureCarousel } from '@/components/blocks/feature-carousel';
 import { Features } from '@/components/blocks/features';
 import { Hero } from '@/components/blocks/hero';
-import { Logos } from '@/components/blocks/logos';
+import { HomepageCapabilities } from '@/components/blocks/homepage-capabilities';
+import { HomepageCTA } from '@/components/blocks/homepage-cta';
+import { HomepageShowcase } from '@/components/blocks/homepage-showcase';
 import { Pricing } from '@/components/blocks/pricing';
-import { ResourceAllocation } from '@/components/blocks/resource-allocation';
-import { Testimonials } from '@/components/blocks/testimonials';
 import { Waitlist } from '@/components/blocks/waitlist';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
@@ -19,9 +20,11 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
   <Background className="via-muted to-muted/80">
     <Hero />
-    <Logos client:only='react' />
+    <FeatureCarousel client:only='react' />
+    <HomepageCapabilities client:only='react' />
     <Features client:only='react'/>
-    <Testimonials client:only='react' />
-    <ResourceAllocation />
+    <HomepageShowcase client:only='react' />
+    <HomepageCTA client:only='react' />
   </Background>
+  <FAQ client:only='react' />
 </DefaultLayout>

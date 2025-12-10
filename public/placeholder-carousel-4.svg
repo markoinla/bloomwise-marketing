@@ -1,0 +1,22 @@
+<svg width="200" height="160" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dome/jar -->
+  <path d="M60 110 L60 70 Q60 40 100 40 Q140 40 140 70 L140 110" stroke="#7DD3FC" stroke-width="3" fill="#E0F2FE"/>
+  <ellipse cx="100" cy="110" rx="40" ry="10" fill="#BAE6FD"/>
+
+  <!-- Flower inside -->
+  <circle cx="100" cy="75" r="12" fill="#F9A8D4"/>
+  <circle cx="88" cy="68" r="8" fill="#FBCFE8"/>
+  <circle cx="112" cy="68" r="8" fill="#FBCFE8"/>
+  <circle cx="88" cy="82" r="8" fill="#FBCFE8"/>
+  <circle cx="112" cy="82" r="8" fill="#FBCFE8"/>
+  <circle cx="100" cy="75" r="6" fill="#FCD34D"/>
+
+  <!-- Stem -->
+  <line x1="100" y1="87" x2="100" y2="105" stroke="#86EFAC" stroke-width="3"/>
+
+  <!-- Sun rays -->
+  <circle cx="160" cy="35" r="15" fill="#FDE68A" opacity="0.8"/>
+  <line x1="160" y1="15" x2="160" y2="8" stroke="#FCD34D" stroke-width="2"/>
+  <line x1="175" y1="35" x2="182" y2="35" stroke="#FCD34D" stroke-width="2"/>
+  <line x1="172" y1="22" x2="178" y2="16" stroke="#FCD34D" stroke-width="2"/>
+</svg>

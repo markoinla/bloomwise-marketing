@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+
 import {
   Workflow,
   Package,
@@ -6,6 +7,7 @@ import {
   ShoppingBag,
   type LucideIcon,
 } from "lucide-react";
+
 import { cn } from "@/lib/utils";
 
 interface Feature {
@@ -117,12 +119,12 @@ export const Features = () => {
                       </div>
                   )}
                   
-                  {/* Mobile: Show image inside the card when active (or always) */}
-                  <div className={cn("mt-6 overflow-hidden rounded-lg border bg-background shadow-sm lg:hidden", isActive ? "block" : "hidden")}>
-                     <img 
-                        src={feature.image} 
-                        alt={feature.title} 
-                        className="w-full object-cover object-top" 
+                  {/* Mobile: Show image when active */}
+                  <div className={cn("mt-6 lg:hidden", isActive ? "block" : "hidden")}>
+                     <img
+                        src={feature.image}
+                        alt={feature.title}
+                        className="w-full object-cover object-top"
                      />
                   </div>
                 </div>
@@ -132,20 +134,20 @@ export const Features = () => {
 
           {/* Right Column: Visual Area (Desktop Only) */}
           <div className="relative hidden lg:col-span-7 lg:block">
-            <div className="sticky top-24 overflow-hidden rounded-2xl border bg-muted/30 shadow-2xl">
+            <div className="sticky top-24">
                <div className="aspect-[4/3] w-full relative">
                   {features.map((feature, index) => (
                       <div
                         key={index}
                         className={cn(
-                            "absolute inset-0 transition-opacity duration-500 flex items-center justify-center p-8",
+                            "absolute inset-0 transition-opacity duration-500 flex items-center justify-center",
                             activeIndex === index ? "opacity-100 z-10" : "opacity-0 z-0"
                         )}
                       >
-                         <img 
-                            src={feature.image} 
-                            alt={feature.title} 
-                            className="w-full h-full object-contain object-center rounded-lg shadow-sm bg-background border ring-1 ring-border/10" 
+                         <img
+                            src={feature.image}
+                            alt={feature.title}
+                            className="w-full h-full object-contain object-center"
                          />
                       </div>
                   ))}

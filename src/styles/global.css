@@ -98,9 +98,9 @@
     "Courier New", monospace;
 
   /* StyleGlide provides a better abstraction for fonts */
-  --display-family: var(--font-sans);
+  --display-family: var(--font-serif);
   --text-family: var(--font-inter);
-  --display-weight: 600;
+  --display-weight: 400;
   --text-weight: 400;
 }
 
@@ -249,22 +249,7 @@
   .font-display {
     font-family: var(--font-display);
     font-weight: var(--display-weight);
-    -webkit-font-feature-settings:
-      "ss02" on,
-      "ss03" on,
-      "ss04" on;
-    -moz-font-feature-settings:
-      "ss02" on,
-      "ss03" on,
-      "ss04" on;
-    -ms-font-feature-settings:
-      "ss02" on,
-      "ss03" on,
-      "ss04" on;
-    font-feature-settings:
-      "ss02" on,
-      "ss03" on,
-      "ss04" on; /* Enables the special `a` character and other characters for DM Sans */
+    font-style: italic;
   }
   .font-mono {
     font-family: var(--font-mono), monospace;

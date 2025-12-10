@@ -4,8 +4,17 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
-    <section className="py-24 md:py-32 lg:py-60">
-      <div className="container">
+    <section className="pt-24 pb-16 md:pt-32 md:pb-16 lg:pt-60 lg:pb-16 relative">
+      {/* Flipped decorative background at top */}
+      <div className="absolute top-0 left-0 right-0 w-full pointer-events-none" style={{ transform: 'scaleY(-1)' }}>
+        <img
+          src="/design-images/cta-bg-home.svg"
+          alt=""
+          className="w-full h-auto"
+        />
+      </div>
+
+      <div className="container relative z-10">
         {/* Main content - centered */}
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-primary mb-4 font-medium tracking-wide md:text-xl">

@@ -1,0 +1,18 @@
+<svg width="200" height="160" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Chart bars -->
+  <rect x="45" y="90" width="20" height="40" rx="3" fill="#BAE6FD"/>
+  <rect x="75" y="70" width="20" height="60" rx="3" fill="#7DD3FC"/>
+  <rect x="105" y="50" width="20" height="80" rx="3" fill="#0EA5E9"/>
+  <rect x="135" y="30" width="20" height="100" rx="3" fill="#0284C7"/>
+
+  <!-- Trend line -->
+  <path d="M55 85 L85 65 L115 45 L145 25" stroke="#86EFAC" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="55" cy="85" r="4" fill="#86EFAC"/>
+  <circle cx="85" cy="65" r="4" fill="#86EFAC"/>
+  <circle cx="115" cy="45" r="4" fill="#86EFAC"/>
+  <circle cx="145" cy="25" r="5" fill="#86EFAC"/>
+
+  <!-- Sparkles -->
+  <path d="M165 45 L168 50 L173 47 L168 54 L165 59 L162 54 L157 47 L162 50 Z" fill="#FCD34D"/>
+  <circle cx="40" cy="60" r="3" fill="#FCD34D" opacity="0.7"/>
+</svg>
