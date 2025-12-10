@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <section className="pt-24 pb-16 md:pt-32 md:pb-16 lg:pt-60 lg:pb-16 relative">
       {/* Flipped decorative background at top */}
-      <div className="absolute top-0 left-0 right-0 w-full pointer-events-none" style={{ transform: 'scaleY(-1)' }}>
+      <div className="absolute top-0 left-0 right-0 w-full pointer-events-none overflow-hidden max-h-[320px]" style={{ transform: 'scaleY(-1)' }}>
         <img
           src="/design-images/cta-bg-home.svg"
           alt=""
@@ -17,16 +17,13 @@ export const Hero = () => {
       <div className="container relative z-10">
         {/* Main content - centered */}
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-primary mb-4 font-medium tracking-wide md:text-xl">
-            Built by florists, for florists
-          </p>
-          <h1 className="text-foreground mx-auto text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
-            Let your business bloom
+          <h1 className="text-foreground mx-auto text-4xl leading-tight tracking-tight md:text-5xl md:leading-tight lg:text-6xl lg:leading-tight">
+            The <span className="font-semibold">Operating System</span> for Professional Florists
           </h1>
 
           <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg md:text-xl lg:text-2xl">
-            Bloomwise is an AI-powered platform that helps you manage and optimize every aspect of your floral business.
-          </p>
+         Bloomwise is the AI-powered platform for managing your entire floral business. <span className="font-italic">Ditch the scary spreadsheet today.</span>
+            </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Button size="lg" className="hover:scale-105 transition-transform duration-300" asChild>

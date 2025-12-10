@@ -22,39 +22,45 @@ const defaultItems: CarouselItem[] = [
   {
     id: "1",
     image: "/design-images/features-carousel/inventory.jpg",
-    title: "Never run out",
-    description: "Track every stem and supply in real-time. Set reorder points, get low-stock alerts, and see where inventory goes.",
+    title: "Nothing falls through the cracks",
+    description: "Every detail lives in one connected system. Orders, recipes, inventory, deliveries — all linked, all visible, all tracked.",
   },
   {
     id: "2",
-    image: "/design-images/features-carousel/events.jpg",
-    title: "Event planning made easy",
-    description: "From consultation to delivery day, keep every detail organized. Capture color palettes, manage contacts, and convert designs to orders.",
+    image: "/design-images/features-carousel/recipes.jpg",
+    title: "Know your profitability",
+    description: "See exact costs and margins for every design. Stop guessing which arrangements make money.",
   },
   {
     id: "3",
-    image: "/design-images/features-carousel/recipes.jpg",
-    title: "Recipes that make money",
-    description: "Document your designs with ingredients, steps, and costs. Track profitability and ensure consistent quality across your team.",
+    image: "/design-images/features-carousel/bloom-ai.jpg",
+    title: "Turn inspiration into action",
+    description: "Upload any photo and get actionable recipes in seconds. AI identifies flowers, extracts colors, estimates complexity.",
   },
   {
     id: "4",
-    image: "/design-images/features-carousel/bloom-ai.jpg",
-    title: "AI-powered design assistant",
-    description: "Upload inspiration photos and let Bloom AI identify flowers, extract color palettes, and generate complete recipes in seconds.",
+    image: "/design-images/features-carousel/shopify.jpg",
+    title: "Sell online without the headaches",
+    description: "True two-way Shopify sync. Orders, products, inventory — always aligned, always up to date.",
   },
   {
     id: "5",
-    image: "/design-images/features-carousel/shopify.jpg",
-    title: "True Shopify sync",
-    description: "Two-way sync keeps products, orders, and customers aligned. Changes in either system stay in sync automatically.",
+    image: "/design-images/features-carousel/events.jpg",
+    title: "Event planning without the chaos",
+    description: "Capture the vision, plan every arrangement, send stunning proposals, convert to orders with one click.",
+  },
+  {
+    id: "6",
+    image: "/design-images/features-carousel/delivery.jpg",
+    title: "Prove every delivery",
+    description: "Photo proof, timestamps, driver routes. Document everything. Eliminate disputes.",
   },
 ];
 
 export const FeatureCarousel = ({
-  headline = "Every tool you need",
-  headlineAccent = "to run your floral business",
-  subheadline = "From order management to inventory tracking, Bloomwise brings everything together so nothing falls through the cracks.",
+  headline = "Run your flower shop,",
+  headlineAccent = "not your spreadsheet.",
+  subheadline = "Say goodbye to your spreadsheet and worn-out recipe binder. Say hello to an intuitive, beautifully connected system built to help florists scale.",
   items = defaultItems,
 }: FeatureCarouselProps) => {
   // Create tripled items for infinite scroll effect

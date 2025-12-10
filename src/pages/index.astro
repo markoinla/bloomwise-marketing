@@ -2,10 +2,12 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import { Background } from '@/components/background';
+import { EventJourney } from '@/components/blocks/event-journey';
 import { FAQ } from '@/components/blocks/faq';
 import { FeatureCarousel } from '@/components/blocks/feature-carousel';
 import { Features } from '@/components/blocks/features';
 import { Hero } from '@/components/blocks/hero';
+import { HomepageAnchorNav } from '@/components/blocks/homepage-anchor-nav';
 import { HomepageCapabilities } from '@/components/blocks/homepage-capabilities';
 import { HomepageCTA } from '@/components/blocks/homepage-cta';
 import { HomepageShowcase } from '@/components/blocks/homepage-showcase';
@@ -21,10 +23,22 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
   <Background className="via-muted to-muted/80">
     <Hero />
     <FeatureCarousel client:only='react' />
-    <HomepageCapabilities client:only='react' />
-    <Features client:only='react'/>
-    <HomepageShowcase client:only='react' />
+    <HomepageAnchorNav client:only='react' />
+    <div id="capabilities">
+      <HomepageCapabilities client:only='react' />
+    </div>
+    <div id="features">
+      <Features client:only='react'/>
+    </div>
+    <div id="events">
+      <EventJourney client:only='react' />
+    </div>
+    <div id="showcase">
+      <HomepageShowcase client:only='react' />
+    </div>
     <HomepageCTA client:only='react' />
   </Background>
-  <FAQ client:only='react' />
+  <div id="faq">
+    <FAQ client:only='react' />
+  </div>
 </DefaultLayout>

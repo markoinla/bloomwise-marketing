@@ -1,48 +1,85 @@
 import {
-  Workflow,
-  Globe,
+  Database,
+  BookOpen,
+  Sparkles,
+  RefreshCw,
+  CalendarCheck,
+  FileText,
   Truck,
-  CreditCard,
-  History,
   Smartphone,
+  Users,
+  Calculator,
+  History,
+  Package,
+  Zap,
+  MessageSquare,
+  Globe,
 } from "lucide-react";
 
-import { FeatureAnchorNav } from "./feature-anchor-nav";
 import { FeatureCapabilities } from "./feature-capabilities";
 
-const anchorNavItems = [
-  { id: "capabilities", label: "Capabilities" },
-  { id: "order-lifecycle", label: "Order Lifecycle" },
-  { id: "multi-source", label: "Multi-Source" },
-  { id: "fulfillment", label: "Fulfillment" },
-  { id: "explore", label: "Explore More" },
-  { id: "faq", label: "FAQ" },
-];
-
 const capabilities = [
+  // First 6 (visible by default)
   {
-    icon: Workflow,
-    title: "Complete Order Lifecycle",
+    icon: Database,
+    title: "Unified Platform",
     description:
-      "Track orders through every stage: Draft → Pending → Confirmed → In Progress → Ready → Out for Delivery → Delivered → Completed. Never lose track of where an order stands.",
+      "Single database for orders, inventory, recipes, events, customers, deliveries. Everything connects—order items link to recipes, recipes link to inventory.",
   },
   {
-    icon: Globe,
-    title: "Orders From Everywhere",
+    icon: BookOpen,
+    title: "Recipe-Centric Production",
     description:
-      "Shopify, phone, walk-in, email, events—all your orders in one unified view. Each source is clearly labeled so you know where business is coming from.",
+      "Recipes as production templates with ingredient-level documentation, substitution options, step-by-step instructions, and automatic cost calculation.",
   },
+  {
+    icon: Sparkles,
+    title: "Bloom AI",
+    description:
+      "Upload inspiration photos to identify flowers automatically, extract color palettes, generate recipes, and estimate complexity.",
+  },
+  {
+    icon: RefreshCw,
+    title: "True Two-Way Shopify Sync",
+    description:
+      "Bidirectional sync for products, orders, and customers. Real-time webhooks—changes appear in seconds. Recipe-to-product mapping for production.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Event-to-Order Workflow",
+    description:
+      "Full event lifecycle from inquiry to completion. Color palettes, multiple arrangements, and one-click conversion from event design to production orders.",
+  },
+  {
+    icon: FileText,
+    title: "Visual Event Proposal",
+    description:
+      "Drag-and-drop proposal editor with client portal. Track when clients view your proposal and capture one-click approvals. Version control built in.",
+  },
+  // Second 6 (hidden behind "View More")
   {
     icon: Truck,
-    title: "Flexible Fulfillment",
+    title: "Delivery Management",
     description:
-      "Pickup, delivery, shipping, or event setup—handle any fulfillment type. Set delivery addresses, assign drivers, and track completion.",
+      "Photo proof at every delivery with timestamps and GPS. Organize driver routes, handle failures gracefully, and eliminate disputes with documentation.",
   },
   {
-    icon: CreditCard,
-    title: "Payment & Deposit Tracking",
+    icon: Smartphone,
+    title: "Mobile Production View",
     description:
-      "Track payment status from pending to paid. Handle partial payments, deposits, and refunds. See outstanding balances at a glance.",
+      "Fulfill orders from your phone. View recipe steps, capture completion photos, update status—perfect for production staff on the shop floor.",
+  },
+  {
+    icon: Users,
+    title: "Team Management",
+    description:
+      "Assign tasks to team members, track who's working on what, and see production progress at a glance. Role-based permissions keep everyone focused.",
+  },
+  {
+    icon: Calculator,
+    title: "Budget & Cost Calculation",
+    description:
+      "Real-time cost tracking for every recipe and event. See exact margins before you quote. When ingredient prices change, costs update automatically.",
   },
   {
     icon: History,
@@ -51,20 +88,32 @@ const capabilities = [
       "Every status change, note, and modification is logged with timestamps and user attribution. Know exactly what happened and when.",
   },
   {
-    icon: Smartphone,
-    title: "Mobile Order Fulfillment",
+    icon: Package,
+    title: "Inventory Management",
     description:
-      "Fulfill orders from your phone. View recipe steps, capture photos, update status—perfect for production staff on the shop floor.",
+      "Track stems, supplies, and containers. Set reorder points, get low-stock alerts, and see exactly where inventory goes with full movement history.",
+  },
+  // Technical capabilities
+  {
+    icon: Zap,
+    title: "Real-Time Webhooks",
+    description:
+      "Instant data sync across all integrations. Shopify orders appear in seconds, not hours. No batch processing delays or manual refreshes.",
+  },
+  {
+    icon: MessageSquare,
+    title: "Client Communication",
+    description:
+      "Contact clients directly through Bloomwise. Track every conversation, send updates, and keep your entire communication history tied to the order or event.",
+  },
+  {
+    icon: Globe,
+    title: "API-First Design",
+    description:
+      "RESTful API for custom integrations. Connect your POS, accounting software, or build custom workflows. Extensible by design.",
   },
 ];
 
 export const HomepageCapabilities = () => {
-  return (
-    <>
-      <FeatureAnchorNav items={anchorNavItems} />
-      <div id="capabilities">
-        <FeatureCapabilities capabilities={capabilities} />
-      </div>
-    </>
-  );
+  return <FeatureCapabilities capabilities={capabilities} initialVisible={6} />;
 };

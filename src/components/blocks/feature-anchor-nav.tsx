@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import type { LucideIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
 interface AnchorItem {
   id: string;
   label: string;
+  icon?: LucideIcon;
 }
 
 interface FeatureAnchorNavProps {
@@ -56,12 +58,13 @@ export const FeatureAnchorNav = ({ items }: FeatureAnchorNavProps) => {
               key={item.id}
               onClick={() => handleClick(item.id)}
               className={cn(
-                "px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 border",
+                "px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 border flex items-center gap-2",
                 activeId === item.id
                   ? "bg-white dark:bg-background border-border/60 text-foreground shadow-sm"
                   : "border-transparent text-muted-foreground hover:text-foreground hover:bg-white/60 dark:hover:bg-background/60"
               )}
             >
+              {item.icon && <item.icon className="w-4 h-4" />}
               {item.label}
             </button>
           ))}

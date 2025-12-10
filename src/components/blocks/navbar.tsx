@@ -23,14 +23,10 @@ import {
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
-  {
-    label: "Features",
-    href: "#features",
-    megamenu: true,
-  },
-  { label: "About Us", href: "/about" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
+  { label: "Order Management", href: "/features/orders" },
+  { label: "Event Planning", href: "/features/events" },
+  { label: "Workshops", href: "/features/workshops" },
+  { label: "Deliveries", href: "/features/deliveries" },
 ];
 
 // Megamenu content
@@ -85,7 +81,7 @@ export const Navbar = () => {
   return (
     <section
       className={cn(
-        "bg-background/70 absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
+        "bg-background/70 absolute left-1/2 z-50 w-[min(95%,1000px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
         "top-5 lg:top-12",
       )}
     >
@@ -220,14 +216,14 @@ export const Navbar = () => {
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
           <ThemeToggle className="hidden" />
-          <a href="/login" className="max-lg:hidden">
+          <a href="/#waitlist" className="max-lg:hidden">
             <Button variant="outline" size="sm">
-              Login
+              Join Waitlist
             </Button>
           </a>
-          <a href="/signup" className="max-lg:hidden">
+          <a href="/book-demo" className="max-lg:hidden">
             <Button size="sm">
-              Sign Up
+              Book a Demo
             </Button>
           </a>
 
@@ -340,14 +336,14 @@ export const Navbar = () => {
 
         {/* Mobile Auth Buttons */}
         <div className="flex flex-col gap-3 pt-4 border-t border-border">
-          <a href="/login" className="w-full">
+          <a href="/#waitlist" className="w-full">
             <Button variant="outline" className="w-full">
-              Login
+              Join Waitlist
             </Button>
           </a>
-          <a href="/signup" className="w-full">
+          <a href="/book-demo" className="w-full">
             <Button className="w-full">
-              Sign Up
+              Book a Demo
             </Button>
           </a>
         </div>
