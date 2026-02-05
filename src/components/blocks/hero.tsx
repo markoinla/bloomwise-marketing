@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { DashboardMockup } from "./dashboard-mockup";
 
 export const Hero = () => {
   return (
@@ -43,17 +44,10 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Video demo */}
-        <div className="mt-16 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:mt-24">
-          <div className="relative h-[793px] w-full rounded-2xl border border-border/50 shadow-2xl overflow-hidden">
-            <video
-              src="https://pub-faf0922fa8834bc78dc4ad5d963b77c7.r2.dev/website-assets/design-demo.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover object-left-top"
-            />
+        {/* Dashboard mockup */}
+        <div className="mt-16 md:mt-20 lg:mt-24 -mx-4 sm:-mx-8 md:-mx-16 lg:-mx-24 xl:-mx-32">
+          <div className="max-w-[1400px] mx-auto px-4">
+            <DashboardMockup />
           </div>
         </div>
       </div>
