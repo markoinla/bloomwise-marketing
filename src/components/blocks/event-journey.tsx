@@ -18,7 +18,7 @@ const stages: JourneyStage[] = [
       "Log initial contact notes and client preferences",
       "Never lose a potential booking again",
     ],
-    image: "https://placehold.co/600x400/e8f5e9/2e7d32?text=Inquiry+Dashboard",
+    image: "/app-screenshots/event-inquiries.png",
   },
   {
     id: "consultation",
@@ -29,7 +29,7 @@ const stages: JourneyStage[] = [
       "Extract color palettes automatically from any image",
       "Capture style preferences and budget expectations",
     ],
-    image: "https://placehold.co/600x400/e3f2fd/1565c0?text=Bloom+AI+Analysis",
+    image: "/app-screenshots/ai-recipe-builder.png",
   },
   {
     id: "design",
@@ -40,7 +40,7 @@ const stages: JourneyStage[] = [
       "See real-time cost calculations as you build",
       "Plan every arrangement for the event",
     ],
-    image: "https://placehold.co/600x400/fff3e0/ef6c00?text=Recipe+Builder",
+    image: "/app-screenshots/event-workspace.png",
   },
   {
     id: "proposal",
@@ -51,7 +51,7 @@ const stages: JourneyStage[] = [
       "Client portal with no login required",
       "Track when they view and approve",
     ],
-    image: "https://placehold.co/600x400/fce4ec/c2185b?text=Visual+Proposal",
+    image: "/app-screenshots/event-proposals.png",
   },
   {
     id: "production",
@@ -62,7 +62,7 @@ const stages: JourneyStage[] = [
       "Generate recipe sheets for your team",
       "Assign tasks and track progress",
     ],
-    image: "https://placehold.co/600x400/f3e5f5/7b1fa2?text=Production+Orders",
+    image: "/app-screenshots/production-orders.png",
   },
   {
     id: "delivery",
@@ -73,7 +73,7 @@ const stages: JourneyStage[] = [
       "Driver routes and mobile access",
       "Final invoicing and payment collection",
     ],
-    image: "https://placehold.co/600x400/e0f2f1/00695c?text=Delivery+Proof",
+    image: "/app-screenshots/delivery-runs.png",
   },
 ];
 

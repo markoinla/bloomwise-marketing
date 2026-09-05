@@ -22,23 +22,23 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
   <Background className="via-muted to-muted/80">
     <Hero />
-    <FeatureCarousel client:only='react' />
-    <HomepageAnchorNav client:only='react' />
+    <FeatureCarousel client:load />
+    <HomepageAnchorNav client:load />
     <div id="capabilities">
-      <HomepageCapabilities client:only='react' />
+      <HomepageCapabilities client:visible />
     </div>
     <div id="features">
-      <Features client:only='react'/>
+      <Features client:visible />
     </div>
     <div id="events">
-      <EventJourney client:only='react' />
+      <EventJourney />
     </div>
     <div id="showcase">
-      <HomepageShowcase client:only='react' />
+      <HomepageShowcase />
     </div>
-    <HomepageCTA client:only='react' />
+    <HomepageCTA />
   </Background>
   <div id="faq">
-    <FAQ client:only='react' />
+    <FAQ client:visible />
   </div>
 </DefaultLayout>
