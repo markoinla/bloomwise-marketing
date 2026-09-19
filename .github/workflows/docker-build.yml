@@ -59,10 +59,14 @@ jobs:
 
       - name: Trigger Dokploy deployment
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DOKPLOY_DEPLOY_TOKEN }}
         run: |
-          curl -X POST https://dev.marko.la/api/deploy/e_iAa3XpeF8WOgds--Us2
-        
-      - name: Trigger dev0 Dokploy deployment
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-        run: |
-          curl -X POST https://dev0.marko.la/api/deploy/Z9bxB24IE3SYB0OWgkmOh
+          # dev0's Dokploy panel is tailnet-only; a GitHub runner cannot route
+          # to its 100.x address and the request hangs until timeout. The
+          # webhook goes through deploy0.marko.la, which routes nothing but
+          # POST /api/deploy/*. Fail the job rather than deploy silently
+          # nothing: the image is already pushed by this point.
+          curl -sS -X POST -f --max-time 30 --retry 5 --retry-delay 15 \
+            --retry-max-time 180 --retry-all-errors \
+            "https://deploy0.marko.la/api/deploy/${DEPLOY_TOKEN}"
